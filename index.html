@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Two Palms Motel | Clean, Comfortable Stays in Glendale, AZ</title>
-  <meta name="description" content="Two Palms Motel: Clean, Comfortable Stays in Glendale, AZ. Licensed, insured, and serving Glendale, AZ. Call (623) 931-4449.">
+  <title>Two Palms Motel | Landscaping Services in </title>
+  <meta name="description" content="Two Palms Motel: Landscaping services in , AZ. Licensed, insured. Call (623) 931-4449.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@400;500;600" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -15,17 +15,22 @@
       --bg-elevated: #111111;
       --bg-card: #141414;
       --border: #1e1e1e;
-      --blue: #2563eb;
-      --blue-glow: rgba(37, 99, 235, 0.15);
-      --red: #dc2626;
-      --red-glow: rgba(220, 38, 38, 0.15);
+      --accent: #16a34a;
+      --accent-h: #15803d;
+      --accent-glow: rgba(22,163,74,0.15);
+      --orb1: rgba(22,163,74,0.12);
+      --orb2: rgba(20,184,166,0.08);
+      --card-border: rgba(22,163,74,0.2);
+      --section-bg: #0a1a0f;
       --text-primary: #ffffff;
       --text-secondary: #a1a1a1;
       --text-muted: #6b6b6b;
+      --primary: 'Montserrat', sans-serif;
+      --secondary: 'Lato', sans-serif;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
-    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.15; }
+    body { font-family: var(--secondary); background: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: var(--primary); line-height: 1.15; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
 
@@ -36,13 +41,9 @@
       background: rgba(10,10,10,0.85); backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border); transition: all 0.3s;
     }
-    .navbar .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; }
-    .navbar .logo span { color: var(--blue); }
-    .navbar .nav-phone {
-      font-size: 0.875rem; font-weight: 600; color: var(--text-secondary);
-      display: flex; align-items: center; gap: 6px;
-    }
-    .navbar .nav-phone:hover { color: var(--text-primary); }
+    .nav-logo { font-family: var(--primary); font-size: 1.1rem; font-weight: 700; }
+    .nav-phone { font-size: 0.875rem; font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
+    .nav-phone:hover { color: var(--text-primary); }
 
     /* HERO */
     .hero {
@@ -52,7 +53,7 @@
     }
     .hero-bg {
       position: absolute; inset: 0;
-      background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80') center/cover no-repeat;
       filter: brightness(0.35);
     }
     .hero-overlay {
@@ -61,7 +62,7 @@
     }
     .hero-grid {
       position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(37,99,235,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.06) 1px, transparent 1px);
+      background-image: linear-gradient(var(--card-border) 1px, transparent 1px), linear-gradient(90deg, var(--card-border) 1px, transparent 1px);
       background-size: 60px 60px;
       mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
       animation: gridPulse 6s ease-in-out infinite;
@@ -70,30 +71,30 @@
     .orb {
       position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none;
     }
-    .orb-1 { width: 400px; height: 400px; background: rgba(37,99,235,0.12); top: 10%; left: 20%; animation: orbFloat1 8s ease-in-out infinite; }
-    .orb-2 { width: 300px; height: 300px; background: rgba(220,38,38,0.08); bottom: 20%; right: 15%; animation: orbFloat2 10s ease-in-out infinite; }
+    .orb-1 { width: 400px; height: 400px; background: var(--orb1); top: 10%; left: 20%; animation: orbFloat1 8s ease-in-out infinite; }
+    .orb-2 { width: 300px; height: 300px; background: var(--orb2); bottom: 20%; right: 15%; animation: orbFloat2 10s ease-in-out infinite; }
     @keyframes orbFloat1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(30px,-40px); } }
     @keyframes orbFloat2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-25px,30px); } }
     .hero-content { position: relative; z-index: 2; max-width: 800px; }
     .hero-badge {
       display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
       text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 100px;
-      border: 1px solid rgba(37,99,235,0.4); background: rgba(37,99,235,0.08);
-      color: var(--blue); margin-bottom: 1.5rem;
+      border: 1px solid var(--card-border); background: var(--accent-glow);
+      color: var(--accent); margin-bottom: 1.5rem;
     }
     .hero h1 {
       font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700;
       letter-spacing: -2px; margin-bottom: 1.5rem; line-height: 1.05;
     }
-    .hero h1 .accent-blue { color: var(--blue); }
+    .hero h1 .accent { color: var(--accent); }
     .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-secondary); max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.7; }
     .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn-primary {
       padding: 0.875rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem;
-      background: var(--blue); color: #fff; transition: all 0.2s; border: none; cursor: pointer;
+      background: var(--accent); color: #fff; transition: all 0.2s; border: none; cursor: pointer;
       display: inline-flex; align-items: center; gap: 0.5rem;
     }
-    .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,99,235,0.35); }
+    .btn-primary:hover { background: var(--accent-h); transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
     .btn-outline {
       padding: 0.875rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem;
       background: transparent; color: var(--text-primary); border: 1px solid var(--border);
@@ -104,17 +105,17 @@
     /* STATS */
     .stats-bar {
       background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      padding: 2rem 2rem; display: flex; justify-content: center; gap: 0;
+      padding: 2rem 2rem; display: flex; justify-content: center;
     }
     .stat { padding: 0 3rem; text-align: center; border-right: 1px solid var(--border); }
     .stat:last-child { border-right: none; }
-    .stat-n { font-family: 'Space Grotesk', sans-serif; font-size: 2.25rem; font-weight: 700; color: var(--blue); line-height: 1; }
+    .stat-n { font-family: var(--primary); font-size: 2.25rem; font-weight: 700; color: var(--accent); line-height: 1; }
     .stat-l { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.5px; text-transform: uppercase; }
 
     /* SECTIONS */
     section { padding: 7rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
-    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
     .section-title { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -1px; margin-bottom: 1rem; }
     .section-sub { font-size: 1.0625rem; color: var(--text-secondary); max-width: 560px; line-height: 1.7; }
     .section-header { margin-bottom: 3.5rem; }
@@ -132,10 +133,10 @@
     /* SERVICES */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .service-card {
-      background: var(--bg-card); border: 1px solid var(--border);
+      background: var(--bg-card); border: 1px solid var(--card-border);
       border-radius: 16px; padding: 2rem; transition: all 0.3s;
     }
-    .service-card:hover { border-color: rgba(37,99,235,0.3); transform: translateY(-4px); }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
     .service-icon { font-size: 2rem; margin-bottom: 1.25rem; }
     .service-card h3 { font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
     .service-card p { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7; }
@@ -146,17 +147,16 @@
     .about-img { width: 100%; height: 460px; object-fit: cover; border-radius: 16px; display: block; }
     .about-badge {
       position: absolute; bottom: -1rem; right: -1.5rem;
-      background: var(--blue); color: #fff; padding: 1.25rem 1.75rem;
-      border-radius: 12px; font-family: 'Space Grotesk', sans-serif;
+      background: var(--accent); color: #fff; padding: 1.25rem 1.75rem;
+      border-radius: 12px; font-family: var(--primary);
       font-size: 1.75rem; font-weight: 700; text-align: center;
-      box-shadow: 0 8px 32px rgba(37,99,235,0.3);
+      box-shadow: 0 8px 32px var(--accent-glow);
     }
     .about-badge small { display: block; font-size: 0.625rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; opacity: 0.85; }
-    .about-text .section-title { margin-bottom: 1.25rem; }
     .about-text > p { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
     .about-list { list-style: none; margin: 1.5rem 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
     .about-list li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; font-weight: 500; padding: 0.5rem 0; }
-    .check { width: 22px; height: 22px; background: rgba(37,99,235,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 0.75rem; flex-shrink: 0; }
+    .check { width: 22px; height: 22px; background: var(--accent-glow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.75rem; flex-shrink: 0; }
 
     /* TESTIMONIALS */
     .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
@@ -164,16 +164,12 @@
     .stars { display: flex; gap: 3px; margin-bottom: 1.25rem; color: #fbbf24; font-size: 1.125rem; }
     .testimonial-text { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7; font-style: italic; margin-bottom: 1.5rem; }
     .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
-    .testimonial-avatar { width: 42px; height: 42px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+    .testimonial-avatar { width: 42px; height: 42px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--primary); font-size: 0.875rem; font-weight: 700; color: #fff; flex-shrink: 0; }
     .testimonial-name { font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); }
     .testimonial-role { font-size: 0.8125rem; color: var(--text-muted); }
 
     /* CTA */
-    .cta-section {
-      padding: 7rem 2rem; text-align: center;
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-elevated) 100%);
-      border-top: 1px solid var(--border);
-    }
+    .cta-section { padding: 7rem 2rem; text-align: center; background: linear-gradient(135deg, var(--bg) 0%, var(--bg-elevated) 100%); border-top: 1px solid var(--border); }
     .cta-section h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -1.5px; margin-bottom: 1rem; }
     .cta-section p { font-size: 1.0625rem; color: var(--text-secondary); margin-bottom: 2.5rem; }
 
@@ -186,13 +182,9 @@
     .footer-col ul { list-style: none; }
     .footer-col ul li { margin-bottom: 0.5rem; }
     .footer-col ul li a { font-size: 0.875rem; color: var(--text-secondary); transition: color 0.2s; }
-    .footer-col ul li a:hover { color: var(--blue); }
+    .footer-col ul li a:hover { color: var(--accent); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
     .footer-bottom p { font-size: 0.8125rem; color: var(--text-muted); }
-
-    /* REVEAL JS */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -200,7 +192,6 @@
       .about-badge { right: 1rem; }
       .footer-top { flex-direction: column; }
       .stat { padding: 0 1.5rem; }
-      .hero h1 { letter-spacing: -1px; }
       .about-list { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
@@ -214,14 +205,11 @@
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav class="navbar">
-    <div class="logo"><span>&#9889;</span> Two Palms</div>
+    <div class="nav-logo"><span style="color:var(--accent)">&#127807;</span> Two Palms</div>
     <a href="tel:6239314449" class="nav-phone">&#128241; (623) 931-4449</a>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
@@ -229,9 +217,9 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="hero-content">
-      <div class="hero-badge">Licensed & Insured - Glendale, AZ</div>
+      <div class="hero-badge">Licensed & Insured - , AZ</div>
       <h1>Two Palms Motel</h1>
-      <p class="hero-sub">Clean, Comfortable Stays in Glendale, AZ. Serving Glendale and surrounding areas with expert Hospitality services. Licensed, insured, and committed to quality on every job.</p>
+      <p class="hero-sub">Landscaping services in , AZ. Serving  and surrounding areas. Licensed, insured, and committed to quality.</p>
       <div class="hero-ctas">
         <a href="#services" class="btn-primary">View Services</a>
         <a href="tel:6239314449" class="btn-outline">&#128241; (623) 931-4449</a>
@@ -239,7 +227,6 @@
     </div>
   </section>
 
-  <!-- STATS -->
   <div class="stats-bar">
     <div class="stat"><div class="stat-n">15+</div><div class="stat-l">Years Experience</div></div>
     <div class="stat"><div class="stat-n">1,200+</div><div class="stat-l">Jobs Completed</div></div>
@@ -247,60 +234,37 @@
     <div class="stat"><div class="stat-n">24hr</div><div class="stat-l">Response Time</div></div>
   </div>
 
-  <!-- SERVICES -->
-  <section id="services">
+  <section id="services" style="background: var(--section-bg);">
     <div class="container">
       <div class="section-header centered">
         <div class="section-label">What We Do</div>
-        <h2 class="section-title">Expert <span style="color:var(--blue)">Hospitality</span> Services</h2>
-        <p class="section-sub">Serving Glendale, AZ and surrounding areas — every project handled with precision and care.</p>
+        <h2 class="section-title">Expert <span style="color:var(--accent)">Landscaping</span> Services</h2>
+        <p class="section-sub">Serving , AZ and surrounding areas.</p>
       </div>
       <div class="services-grid">
 
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon">&#128718;</div>
-          <h3>Daily Stays</h3>
-          <p>Professional daily stays services for Glendale homes and businesses. Quality workmanship, licensed and insured.</p>
-        </div>
-        <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon">&#128718;</div>
-          <h3>Weekly Rates</h3>
-          <p>Professional weekly rates services for Glendale homes and businesses. Quality workmanship, licensed and insured.</p>
-        </div>
-        <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon">&#128718;</div>
-          <h3>Extended Stay</h3>
-          <p>Professional extended stay services for Glendale homes and businesses. Quality workmanship, licensed and insured.</p>
-        </div>
-        <div class="service-card reveal reveal-delay-4">
-          <div class="service-icon">&#128718;</div>
-          <h3>RV Parking</h3>
-          <p>Professional rv parking services for Glendale homes and businesses. Quality workmanship, licensed and insured.</p>
-        </div>
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon">&#128718;</div>
-          <h3>Free WiFi</h3>
-          <p>Professional free wifi services for Glendale homes and businesses. Quality workmanship, licensed and insured.</p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" style="background: var(--bg-elevated);">
+  <section id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-img-wrap">
-          <img class="about-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&q=80" alt="Two Palms Motel professional Hospitality services">
+          <img class="about-img" src="https://images.unsplash.com/photo-1601292162349-bde7977f4178?w=1920&q=80" alt="Two Palms Motel">
           <div class="about-badge">$0<small>Estimate</small></div>
         </div>
         <div class="about-text">
           <div class="section-label">About Us</div>
-          <h2 class="section-title">Two Palms<br><span style="color:var(--blue)">Built on Quality.</span></h2>
-          <p>Two Palms Motel has been serving Glendale with professional Hospitality services. Every job gets our full attention — we're not the biggest shop, and we're proud of that.</p>
+          <h2 class="section-title" style="margin-bottom:1.25rem">Two Palms<br><span style="color:var(--accent)">Built on Quality.</span></h2>
+          <p>Two Palms Motel has been serving  with professional landscaping services. Every job gets our full attention — we're not the biggest shop, and we're proud of that.</p>
           <p>We show up on time, do the work right, and stand behind it. Licensed and insured for your protection.</p>
           <ul class="about-list">
-<li reveal-delay-1"><span class="check">&#10003;</span> Licensed & fully insured</li><li reveal-delay-2"><span class="check">&#10003;</span> Free estimates for qualifying projects</li><li reveal-delay-3"><span class="check">&#10003;</span> 5-year workmanship warranty</li><li reveal-delay-4"><span class="check">&#10003;</span> Permits pulled when required</li><li reveal-delay-1"><span class="check">&#10003;</span> Same-week scheduling</li>
+          <li class="reveal reveal-delay-1"><span class="check">&#10003;</span> Licensed & fully insured</li>
+          <li class="reveal reveal-delay-2"><span class="check">&#10003;</span> Free estimates for qualifying projects</li>
+          <li class="reveal reveal-delay-3"><span class="check">&#10003;</span> 5-year workmanship warranty</li>
+          <li class="reveal reveal-delay-4"><span class="check">&#10003;</span> Permits pulled when required</li>
+          <li class="reveal reveal-delay-1"><span class="check">&#10003;</span> Same-week scheduling</li>
           </ul>
           <a href="tel:6239314449" class="btn-primary">Call Us Today</a>
         </div>
@@ -308,33 +272,35 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
+  <section id="testimonials" style="background: var(--section-bg);">
     <div class="container">
       <div class="section-header centered">
         <div class="section-label">Client Reviews</div>
-        <h2 class="section-title">What Our Clients <span style="color:var(--blue)">Say</span></h2>
+        <h2 class="section-title">What Our Clients <span style="color:var(--accent)">Say</span></h2>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card">
+
+        <div class="testimonial-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"Great communication and excellent work. Would hire again in a heartbeat."</p>
+          <p class="testimonial-text">"Great communication and excellent work. Would hire again."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">DM</div>
             <div><div class="testimonial-name">David M.</div><div class="testimonial-role">Verified Client</div></div>
           </div>
         </div>
-        <div class="testimonial-card">
+
+        <div class="testimonial-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"Professional, on time, and fair pricing. Highly recommend to anyone."</p>
+          <p class="testimonial-text">"Professional, on time, and fair pricing. Highly recommend."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">SK</div>
             <div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role">Verified Client</div></div>
           </div>
         </div>
-        <div class="testimonial-card">
+
+        <div class="testimonial-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"Did exactly what they said they'd do. Would use again without question."</p>
+          <p class="testimonial-text">"Did exactly what they said they'd do. Would use again."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">JR</div>
             <div><div class="testimonial-name">James R.</div><div class="testimonial-role">Verified Client</div></div>
@@ -344,62 +310,40 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta-section" id="contact">
     <div class="container">
       <h2>Ready to Get Started?</h2>
       <p>Call or text us today — no obligation, just a conversation.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="tel:6239314449" class="btn-primary" style="background:var(--blue);color:#fff">&#128241; (623) 931-4449</a>
+      <div style="display:flex;justify-content:center">
+        <a href="tel:6239314449" class="btn-primary">&#128241; (623) 931-4449</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo" style="font-size:1rem"><span>&#9889;</span> Two Palms</div>
-          <p>Two Palms Motel — professional Hospitality services in Glendale, AZ. Quality work, fair pricing, zero shortcuts.</p>
+          <div class="nav-logo" style="font-size:1rem"><span style="color:var(--accent)">&#127807;</span> Two Palms</div>
+          <p>Two Palms Motel — professional landscaping services in , AZ. Quality work, fair pricing, zero shortcuts.</p>
         </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">View All Services</a></li>
-            <li><a href="tel:6239314449">Request Quote</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="tel:6239314449">&#128241; (623) 931-4449</a></li>
-            <li><a href="#">Glendale, AZ</a></li>
-          </ul>
-        </div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">View All</a></li><li><a href="tel:6239314449">Request Quote</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#testimonials">Reviews</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6239314449">&#128241; (623) 931-4449</a></li><li><a href="#">, AZ</a></li></ul></div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Two Palms Motel. All rights reserved.</p>
-        <p>Website by BrandShift</p>
+        <p style="color:var(--text-muted);font-size:0.75rem">Website by <span style="color:var(--accent)">BrandShift</span></p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
+    const io = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.1 });
     revealEls.forEach(el => io.observe(el));
-    // Navbar scroll effect
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('.navbar');
       nav.style.background = window.scrollY > 40 ? 'rgba(10,10,10,0.98)' : 'rgba(10,10,10,0.85)';
